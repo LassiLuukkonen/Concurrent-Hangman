@@ -1,5 +1,5 @@
 # Concurrent-Hangman
-A networked multiplayer word-guessing game implemented using custom concurrency objects. This assignment was originally part of a university course about concurrency.
+A networked multiplayer word-guessing game implemented using custom concurrency objects. This project was originally part of a university course about concurrency.
 
 ## How to run?
 1. Install sbt
