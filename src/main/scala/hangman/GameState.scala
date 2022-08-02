@@ -26,7 +26,7 @@ case class GameState(word: String, numberOfGuesses: Int, guessedChars: Set[Char]
     word.map{ c =>
       guessedChars.contains(c) match {
         case true => c
-        case false => '*'
+        case false => '_'
       }
     }
   }

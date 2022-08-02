@@ -4,6 +4,8 @@ import reactor.Dispatcher
 import reactor.api.{EventHandler, Handle, Event}
 import java.net.{Socket}
 import scala.collection.mutable.HashSet
+import scala.util.Random
+import scala.io.Source
 
 class HangmanGame(val hiddenWord: String, val initialnumberOfGuesses: Int) {
 
@@ -59,6 +61,8 @@ class HangmanGame(val hiddenWord: String, val initialnumberOfGuesses: Int) {
     private val handle = new TCPTextHandle(socket)
     private var name: String = "NoNameGivenYet"
     private var firstMessage = true
+
+    send("Please give your NAME.")
     
     def getHandle: Handle[String] = handle.asInstanceOf[Handle[String]]
 
@@ -68,37 +72,55 @@ class HangmanGame(val hiddenWord: String, val initialnumberOfGuesses: Int) {
         // (as per specification)
         case null => {
           close()
-          // System.out.println("Connection to " + name + " is removed.")
+          System.out.println("Connection to " + name + " is removed.")
         }
         case someData => {
           // Process the data as a name.
           if (firstMessage) {
-            name = someData
-            require(name.length() >= 1) // As per specification
-            require(!name.contains(" ")) // As per specification
-            firstMessage = false
-            send(gameState.getMaskedWord + " " + gameState.numberOfGuesses) // As per specification
-            // Now the person has given their name, and a response has been sent back.
-            // Therefore, the person has joined the game, and they should be both a player and a person.
-            players.add(this) 
+            if (someData.length() < 2 || someData.contains(" ") || !someData.matches("^[a-zA-Z0-9]*$")) {
+              send("Please give ANOTHER NAME. The name must consist only of alphanumeric characters and it has to be at least 2 charecter long.")
+              System.out.println(name + " sent a non-acceptable name: " + someData)
+            }
+            else {
+              name = someData
+              firstMessage = false
+              send("Thanks for giving your name, " + name + ".")
+              send("The word is " + gameState.getMaskedWord + ". You have " + gameState.numberOfGuesses + " guess(es) left.") // As per specification
+              // Now the person has given their name, and a response has been sent back.
+              // Therefore, the person has joined the game, and they should be both a player and a person.
+              players.add(this)
+              System.out.println(name + " sent an acceptable name: " + someData)
+            }
+            
           }
           // Process the data as a guessed character.
           else {
-            require(someData.length() == 1) // As per specification
-            val guess: Char = someData.charAt(0)
-            // Make a guess and send a response to all players.
-            gameState = gameState.performGuess(guess)
-            sendToAllPlayers(guess + " " + gameState.getMaskedWord + " " + gameState.numberOfGuesses + " " + name)
-
-            // If the game has ended, first shut down all PersonHandlers (and individual connections).
-            // Finally, shut down the acceptHandler.
-            if (gameState.gameOverChecker) {
-              closeAllPersonHandlers()
-              acceptHandler.close()
-              // The server program should stop.
+            if (!someData.matches("[a-z]")) {
+              send("Please give ANOTHER GUESS. A guess must be one lowercase letter of the English alphabet.")
+              System.out.println(name + " sent a non-acceptable guess: " + someData)
+            }
+            else {
+              val guess: Char = someData.charAt(0)
+              // Make a guess and send a response to all players.
+              gameState = gameState.performGuess(guess)
+              sendToAllPlayers("The word is " + gameState.getMaskedWord + ". " + name + " made the guess " + guess +  ". You have " + gameState.numberOfGuesses + " guess(es) left.")
+              
+              System.out.println(name + " sent an acceptable guess: " + someData)
+              // If the game has ended, first shut down all PersonHandlers (and individual connections).
+              // Finally, shut down the acceptHandler.
+              if (gameState.gameOverChecker) {
+                System.out.println("Game is over.")
+                sendToAllPlayers("")
+                if (gameState.gameWonChecker) { sendToAllPlayers("YOU WIN!") }
+                if (gameState.gameLostChecker) { sendToAllPlayers("YOU LOSE!") }
+                sendToAllPlayers("The word was " + gameState.word + ".")
+                closeAllPersonHandlers()
+                acceptHandler.close()
+                // The server program should stop.
+              }
             }
           }
-          // System.out.println(name + " sent a message: " + someData)
+          
         }
       }
     }
@@ -137,13 +159,11 @@ class HangmanGame(val hiddenWord: String, val initialnumberOfGuesses: Int) {
 object HangmanGame {
 
   def main(args: Array[String]): Unit = {
-    // Exctract data from the command line arguments.
-    require(args.size == 2) // As per specification
-    val word: String = args(0)
-    require(word.matches("[a-z]+")) // As per specification + can't have a "word" length 0
-    val allowedFailedGuessess: Int = args(1).toInt
-    require(allowedFailedGuessess > 0) // As per specification
-    
+    val words = Source.fromFile("words.txt").getLines.toList
+    val random = new Random
+    val word = words(random.nextInt(words.length))
+    val allowedFailedGuessess: Int = (3).max(word.length/2)
+
     // Start the game.
     var hg: HangmanGame = new HangmanGame(word, allowedFailedGuessess)
     hg.start()
