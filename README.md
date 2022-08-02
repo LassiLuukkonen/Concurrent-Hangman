@@ -1,6 +1,7 @@
 # Concurrent-Hangman
-A networked multiplayer Hangman game implemented using custom concurrency objects (instead of premade libraries). This assignment was originally part of a university course about concurrency.
+A networked multiplayer word-guessing game implemented using custom concurrency objects. This assignment was originally part of a university course about concurrency.
 
-Run the game by using the command from the main folder:
-sbt "run zebra 3"
-for the word zebra and for a maximum of 3 wrong guesses
+## How to run?
+1. Install sbt
+2. From the repo's topmost folder, run the command: sbt run
+3. Players may join the game using Telnet, for example with the command: telnet localhost <port_number>
