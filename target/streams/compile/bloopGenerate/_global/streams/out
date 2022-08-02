@@ -1,0 +1,4 @@
+[debug] [reactor-template] Classpath dependencies List()
+[debug] [reactor-template] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'reactor-template' to 'C:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\.bloop\reactor-template.json'
+[success] Generated .bloop\reactor-template.json

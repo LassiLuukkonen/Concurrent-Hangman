@@ -1,0 +1,70 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:3:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.concurrent.TimeLimitedTests[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:4:16: object api is not a member of package reactor[0m
+[0m[[0m[31merror[0m] [0m[0mimport reactor.api.{Event, EventHandler, Handle}[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:5:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.funsuite.AnyFunSuite[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:6:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.time.{Seconds, Span}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:8:34: not found: type AnyFunSuite[0m
+[0m[[0m[31merror[0m] [0m[0mclass QueueSemanticsTest extends AnyFunSuite with TimeLimitedTests {[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:8:51: not found: type TimeLimitedTests[0m
+[0m[[0m[31merror[0m] [0m[0mclass QueueSemanticsTest extends AnyFunSuite with TimeLimitedTests {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:11:27: not found: type Span[0m
+[0m[[0m[31merror[0m] [0m[0m  override def timeLimit: Span = Span(10, Seconds)[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:11:34: not found: value Span[0m
+[0m[[0m[31merror[0m] [0m[0m  override def timeLimit: Span = Span(10, Seconds)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:11:43: not found: value Seconds[0m
+[0m[[0m[31merror[0m] [0m[0m  override def timeLimit: Span = Span(10, Seconds)[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:13:47: not found: type Handle[0m
+[0m[[0m[31merror[0m] [0m[0m  class IntegerHandle(val i: Integer) extends Handle[Integer] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:18:52: not found: type EventHandler[0m
+[0m[[0m[31merror[0m] [0m[0m  class IntegerHandler(h: Handle[Integer]) extends EventHandler[Integer] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:18:27: not found: type Handle[0m
+[0m[[0m[31merror[0m] [0m[0m  class IntegerHandler(h: Handle[Integer]) extends EventHandler[Integer] {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:19:29: not found: type Handle[0m
+[0m[[0m[31merror[0m] [0m[0m    override def getHandle: Handle[Integer] = h[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:23:29: not found: type Event[0m
+[0m[[0m[31merror[0m] [0m[0m  def generateIntegerEvent: Event[Integer] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:25:5: not found: value Event[0m
+[0m[[0m[31merror[0m] [0m[0m    Event(h.read(), new IntegerHandler(h))[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:28:3: not found: value test[0m
+[0m[[0m[31merror[0m] [0m[0m  test("the queue is empty when created") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:29:17: not found: type BlockingEventQueue[0m
+[0m[[0m[31merror[0m] [0m[0m    val q = new BlockingEventQueue[Integer](10)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:35:3: not found: value test[0m
+[0m[[0m[31merror[0m] [0m[0m  test("the queue returns inserted elements") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:36:17: not found: type BlockingEventQueue[0m
+[0m[[0m[31merror[0m] [0m[0m    val q = new BlockingEventQueue[Integer](10)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:45:3: not found: value test[0m
+[0m[[0m[31merror[0m] [0m[0m  test("the queue retains the order of elements") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:46:17: not found: type BlockingEventQueue[0m
+[0m[[0m[31merror[0m] [0m[0m    val q = new BlockingEventQueue[Integer](10)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:61:3: not found: value test[0m
+[0m[[0m[31merror[0m] [0m[0m  test("the queue implements getAll") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:62:17: not found: type BlockingEventQueue[0m
+[0m[[0m[31merror[0m] [0m[0m    val q = new BlockingEventQueue[Integer](10)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m23 errors found[0m

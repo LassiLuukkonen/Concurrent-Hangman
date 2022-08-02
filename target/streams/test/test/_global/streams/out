@@ -1,0 +1,22 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(reactor.QueueSemanticsTest, org.scalatest.tools.Framework$$anon$1@638f86b, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(reactor.ReactorSemanticsTest, org.scalatest.tools.Framework$$anon$1@638f86b, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mQueueSemanticsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the queue is empty when created[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the queue returns inserted elements[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the queue retains the order of elements[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the queue implements getAll[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReactorSemanticsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the dispatcher is created and destroyed without hanging[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- handleEvents with no handlers returns immediately[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the dispatcher works for one handler[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- the dispatcher works for multiple handlers without mangling events[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- a dispatcher with a small queue works for multiple handlers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- two distinct dispatchers are independent[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 306 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactor.QueueSemanticsTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactor.ReactorSemanticsTest[0m

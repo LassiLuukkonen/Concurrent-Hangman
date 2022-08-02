@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:47:19: not enough arguments for method apply: (data: T, handler: reactor.api.EventHandler[T]): reactor.api.Event[T] in object Event.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter handler.[0m
+[0m[[0m[31merror[0m] [0m[0m    val e1 = Event(null)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:48:19: not enough arguments for method apply: (data: T, handler: reactor.api.EventHandler[T]): reactor.api.Event[T] in object Event.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter handler.[0m
+[0m[[0m[31merror[0m] [0m[0m    val e2 = Event(null)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\src\test\scala\reactor\QueueSemanticsTest.scala:49:19: not enough arguments for method apply: (data: T, handler: reactor.api.EventHandler[T]): reactor.api.Event[T] in object Event.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter handler.[0m
+[0m[[0m[31merror[0m] [0m[0m    val e3 = Event(null)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
