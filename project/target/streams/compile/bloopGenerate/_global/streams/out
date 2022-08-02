@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0m[reactor-template-build] Classpath dependencies List()[0m
-[0m[[0m[0mdebug[0m] [0m[0m[reactor-template-build] Dependencies from configurations List()[0m
-[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'reactor-template-build' to 'C:\Users\Lassi\Documents\GitHub\Concurrent-Programming\reactor\reactor-template\project\.bloop\reactor-template-build.json'[0m
-[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\reactor-template-build.json[0m
+[0m[[0m[0mdebug[0m] [0m[0m[concurrent-hangman-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[concurrent-hangman-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'concurrent-hangman-build' to 'C:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\project\.bloop\concurrent-hangman-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\concurrent-hangman-build.json[0m

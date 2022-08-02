@@ -1,2 +1,19 @@
-[0m[[0m[33mwarn[0m] [0m[0m2 deprecations (since 2.13.0); re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\GameState.scala:3:28: not found: type wording[0m
+[0m[[0m[31merror[0m] [0m[0mcase class GameState(word: wording, numberOfGuesses: Int, guessedChars: Set[Char]) {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\GameState.scala:25:22: not found: type wording[0m
+[0m[[0m[31merror[0m] [0m[0m  def getMaskedword: wording = {[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\HangmanGame.scala:80:28: value getMaskedStr is not a member of hangman.GameState[0m
+[0m[[0m[31merror[0m] [0m[0m            send(gameState.getMaskedStr + " " + gameState.guessCount) // As per specification[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\HangmanGame.scala:80:59: value guessCount is not a member of hangman.GameState[0m
+[0m[[0m[31merror[0m] [0m[0m            send(gameState.getMaskedStr + " " + gameState.guessCount) // As per specification[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\HangmanGame.scala:91:54: value getMaskedStr is not a member of hangman.GameState[0m
+[0m[[0m[31merror[0m] [0m[0m            sendToAllPlayers(guess + " " + gameState.getMaskedStr + " " + gameState.guessCount + " " + name)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\src\main\scala\hangman\HangmanGame.scala:91:85: value guessCount is not a member of hangman.GameState[0m
+[0m[[0m[31merror[0m] [0m[0m            sendToAllPlayers(guess + " " + gameState.getMaskedStr + " " + gameState.guessCount + " " + name)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
