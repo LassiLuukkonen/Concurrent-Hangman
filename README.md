@@ -4,4 +4,4 @@ A networked multiplayer word-guessing game implemented using custom concurrency 
 ## How to run?
 1. Install sbt
 2. From the repo's topmost folder, run the command: sbt run
-3. Players may join the game from the same device or from another device using Telnet, for example with the command: telnet localhost <port_number>
+3. Players may join the game from the same or another device using Telnet, for example with the command: telnet localhost <port_number>
