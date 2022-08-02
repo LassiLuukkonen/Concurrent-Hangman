@@ -13,13 +13,11 @@
 [0m[[0m[0mdebug[0m] [0m[0m	GameState$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GameState.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	HangmanGame$PersonHandler.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mRolling back changes to class files.[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0mRestoring class files: [0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	HangmanGame$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HangmanGame$AcceptHandler.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HangmanGame.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GameState$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	GameState.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	HangmanGame$PersonHandler.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	HangmanGame.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	HangmanGame$AcceptHandler.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	GameState$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\target\scala-2.13\classes.bak[0m

@@ -1,6 +1,6 @@
 package hangman
 
-case class GameState(word: wording, numberOfGuesses: Int, guessedChars: Set[Char]) {
+case class GameState(word: String, numberOfGuesses: Int, guessedChars: Set[Char]) {
   require(word != null && word.length > 0)
   require(numberOfGuesses >= 0)
   require(guessedChars != null)
@@ -22,7 +22,7 @@ case class GameState(word: wording, numberOfGuesses: Int, guessedChars: Set[Char
 
   // returns the word that the player is trying to guess, BUT the
   // charecters that haven't yet been guessed right, are hidden
-  def getMaskedword: wording = {
+  def getMaskedWord: String = {
     word.map{ c =>
       guessedChars.contains(c) match {
         case true => c

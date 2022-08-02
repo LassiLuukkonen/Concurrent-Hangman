@@ -22,11 +22,38 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to C:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\target\scala-2.13\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.6[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 339c59d3 for Scala compiler version 2.13.6[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler af6f369 for Scala compiler version 2.13.6[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Lassi\Documents\GitHub\Concurrent-Hangman\target\scala-2.13\classes;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-funsuite_2.13\3.2.0\scalatest-funsuite_2.13-3.2.0.jar;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-core_2.13\3.2.0\scalatest-core_2.13-3.2.0.jar;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.6\scala-reflect-2.13.6.jar;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-compatible\3.2.0\scalatest-compatible-3.2.0.jar;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalactic\scalactic_2.13\3.2.0\scalactic_2.13-3.2.0.jar;C:\Users\Lassi\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.13\1.2.0\scala-xml_2.13-1.2.0.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mCompilation failed (CompilerInterface)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from hangman.GameState...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: hangman.GameState[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(hangman.GameState)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of hangman.HangmanGame.PersonHandler: Set(UsedName(numberOfGuesses,[Default]), UsedName(performGuess,[Default]), UsedName(gameOverChecker,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of hangman.HangmanGame: Set(UsedName(apply,[Default]), UsedName(hangman;GameState;init;,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(hangman.GameState,ModifiedNames(changes = UsedName(guessCount,[Default]), UsedName(isGameWon,[Default]), UsedName(numberOfGuesses,[Default]), UsedName(gameWonChecker,[Default]), UsedName(guessChars,[Default]), UsedName(isGameOver,[Default]), UsedName(isGameLost,[Default]), UsedName(makeGuess,[Default]), UsedName(performGuess,[Default]), UsedName(apply,[Default]), UsedName(copy,[Default]), UsedName(gameLostChecker,[Default]), UsedName(gameOverChecker,[Default]), UsedName(guessedChars,[Default]), UsedName(hangman;GameState;init;,[Default]))) invalidates 3 classes due to The hangman.GameState has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(guessCount,[Default]), UsedName(isGameWon,[Default]), UsedName(numberOfGuesses,[Default]), UsedName(gameWonChecker,[Default]), UsedName(guessChars,[Default]), UsedName(isGameOver,[Default]), UsedName(isGameLost,[Default]), UsedName(makeGuess,[Default]), UsedName(performGuess,[Default]), UsedName(apply,[Default]), UsedName(copy,[Default]), UsedName(gameLostChecker,[Default]), UsedName(gameOverChecker,[Default]), UsedName(guessedChars,[Default]), UsedName(hangman;GameState;init;,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(hangman.GameState)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(hangman.HangmanGame.PersonHandler, hangman.HangmanGame)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from hangman.HangmanGame...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: hangman.HangmanGame[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(hangman.HangmanGame)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(hangman.HangmanGame,ModifiedNames(changes = UsedName(hangman;HangmanGame;init;,[Default]), UsedName(initialGuessCount,[Default]), UsedName(finalize,[Default]), UsedName(initialnumberOfGuesses,[Default]))) invalidates 1 classes due to The hangman.HangmanGame has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hangman;HangmanGame;init;,[Default]), UsedName(initialGuessCount,[Default]), UsedName(finalize,[Default]), UsedName(initialnumberOfGuesses,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(hangman.HangmanGame)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	hangman.HangmanGame.PersonHandler[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: hangman.HangmanGame.PersonHandler[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set(hangman.HangmanGame.PersonHandler)[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.8054468 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

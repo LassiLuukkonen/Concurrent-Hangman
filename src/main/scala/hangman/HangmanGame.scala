@@ -5,10 +5,10 @@ import reactor.api.{EventHandler, Handle, Event}
 import java.net.{Socket}
 import scala.collection.mutable.HashSet
 
-class HangmanGame(val hiddenWord: String, val initialGuessCount: Int) {
+class HangmanGame(val hiddenWord: String, val initialnumberOfGuesses: Int) {
 
   private var dispatcher: Dispatcher = new Dispatcher()
-  private var gameState = new GameState(hiddenWord, initialGuessCount, Set())
+  private var gameState = new GameState(hiddenWord, initialnumberOfGuesses, Set())
   private var acceptHandler = new AcceptHandler()
 
   // players keeps track of persons who have *joined* the game (and are still playing the game).
@@ -77,7 +77,7 @@ class HangmanGame(val hiddenWord: String, val initialGuessCount: Int) {
             require(name.length() >= 1) // As per specification
             require(!name.contains(" ")) // As per specification
             firstMessage = false
-            send(gameState.getMaskedStr + " " + gameState.guessCount) // As per specification
+            send(gameState.getMaskedWord + " " + gameState.numberOfGuesses) // As per specification
             // Now the person has given their name, and a response has been sent back.
             // Therefore, the person has joined the game, and they should be both a player and a person.
             players.add(this) 
@@ -88,7 +88,7 @@ class HangmanGame(val hiddenWord: String, val initialGuessCount: Int) {
             val guess: Char = someData.charAt(0)
             // Make a guess and send a response to all players.
             gameState = gameState.performGuess(guess)
-            sendToAllPlayers(guess + " " + gameState.getMaskedStr + " " + gameState.guessCount + " " + name)
+            sendToAllPlayers(guess + " " + gameState.getMaskedWord + " " + gameState.numberOfGuesses + " " + name)
 
             // If the game has ended, first shut down all PersonHandlers (and individual connections).
             // Finally, shut down the acceptHandler.
